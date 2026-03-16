@@ -22,19 +22,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ✅ PRIMARY SEO -->
-<title>LocalVex Media | Local Advertising Agency — Cincinnati, OH | Butler & Clermont County</title>
-<meta name="description" content="LocalVex Media is a Cincinnati-based local advertising agency running data-driven Meta & Google ad campaigns for roofers, restaurants, salons, and contractors. Serving Butler County & Clermont County, OH. Book a free strategy call today.">
+<title>LocalVex Media | Marketing Automation Agency — Cincinnati, OH</title>
+<meta name="description" content="LocalVex Media builds marketing automation systems for local businesses in Cincinnati, OH. Stop losing leads to slow follow-up. Automate your bookings, reviews, and campaigns.">
 <link rel="canonical" href="https://localvex.com/">
 
 <!-- ✅ KEYWORDS -->
-<meta name="keywords" content="local advertising agency Cincinnati, digital marketing agency Cincinnati OH, Facebook ads for local businesses, Google ads Cincinnati, local ad campaigns Butler County, Clermont County marketing agency, roofer marketing Cincinnati, restaurant advertising Cincinnati, salon marketing Ohio, contractor advertising Cincinnati, paid ads agency Cincinnati, local business marketing Ohio, social media advertising Cincinnati, lead generation Cincinnati, LocalVex Media">
+<meta name="keywords" content="marketing automation Cincinnati, lead automation Ohio, local business automation, CRM setup Cincinnati, automated follow up system, local advertising agency Cincinnati, digital marketing agency Cincinnati OH, Google ads Cincinnati, lead generation Cincinnati, roofer marketing Cincinnati, restaurant advertising Cincinnati, contractor advertising Cincinnati, paid ads agency Cincinnati, local business marketing Ohio, LocalVex Media">
 
 <!-- ✅ ROBOTS -->
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
 <!-- ✅ OPEN GRAPH (Facebook / LinkedIn) -->
-<meta property="og:title" content="LocalVex Media | Local Ad Agency — Cincinnati, OH">
-<meta property="og:description" content="Data-driven Meta & Google ad campaigns for roofers, restaurants, salons & contractors in Cincinnati. Real results. Performance-aligned pricing.">
+<meta property="og:title" content="LocalVex Media | Marketing Automation Agency — Cincinnati, OH">
+<meta property="og:description" content="Marketing automation systems for local businesses in Cincinnati. Automate lead follow-up, appointment booking, reviews, and campaigns. Setup in 14 days.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://localvex.com/">
 <meta property="og:site_name" content="LocalVex Media">
@@ -42,8 +42,8 @@
 
 <!-- ✅ TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LocalVex Media | Local Ad Agency — Cincinnati, OH">
-<meta name="twitter:description" content="Data-driven ad campaigns for local service businesses in Cincinnati, OH. Roofers, restaurants, salons & contractors.">
+<meta name="twitter:title" content="LocalVex Media | Marketing Automation Agency — Cincinnati, OH">
+<meta name="twitter:description" content="Marketing automation systems for local businesses in Cincinnati, OH. Stop losing leads. Automate everything.">
 
 <!-- ✅ GEO TARGETING -->
 <meta name="geo.region" content="US-OH">
@@ -432,14 +432,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero__inner {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-12);
-  align-items: center;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero__content {
-  max-width: 600px;
+  max-width: 820px;
+  margin: 0 auto;
 }
 
 .hero__headline {
@@ -457,18 +457,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero__sub {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: var(--color-text-muted);
   margin-bottom: var(--space-8);
-  max-width: 520px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__ctas {
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
-  margin-bottom: var(--space-10);
+  justify-content: center;
+  margin-bottom: var(--space-12);
 }
 
 .hero__ctas .btn {
@@ -476,95 +479,50 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 0.95rem;
 }
 
-.hero__trust {
-  display: flex;
-  gap: var(--space-6);
-  flex-wrap: wrap;
+/* Hero Stats Row */
+.hero__stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero__trust-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: 0.8rem;
+.hero__stat {
+  text-align: center;
+  padding: var(--space-4) var(--space-2);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.hero__stat-value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-1);
+}
+
+.hero__stat-label {
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--color-text-muted);
   letter-spacing: 0.01em;
 }
 
-.hero__trust-item svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-primary);
-  flex-shrink: 0;
+@media (max-width: 700px) {
+  .hero__stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Hero Stat Cards */
-.hero__stats {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  position: relative;
-}
-
-.stat-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-primary);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6) var(--space-8);
-  box-shadow: var(--shadow-md);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
-}
-
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.stat-card:nth-child(1) { animation: float 6s ease-in-out infinite; }
-.stat-card:nth-child(2) { animation: float 6s ease-in-out 1s infinite; margin-left: var(--space-8); }
-.stat-card:nth-child(3) { animation: float 6s ease-in-out 2s infinite; }
-
-.stat-card__value {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: var(--space-1);
-}
-
-.stat-card__label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  letter-spacing: 0.02em;
-}
-
-@media (max-width: 900px) {
-  .hero__inner {
+@media (max-width: 400px) {
+  .hero__stats-row {
     grid-template-columns: 1fr;
-    text-align: center;
   }
-  .hero__content { max-width: 100%; }
-  .hero__sub { max-width: 100%; margin-left: auto; margin-right: auto; }
-  .hero__ctas { justify-content: center; }
-  .hero__trust { justify-content: center; }
-  .hero__stats {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-3);
-  }
-  .stat-card {
-    padding: var(--space-4) var(--space-6);
-    flex: 1;
-    min-width: 160px;
-  }
-  .stat-card:nth-child(2) { margin-left: 0; }
-  .stat-card__value { font-size: 1.8rem; }
 }
 
 /* ========== SOCIAL PROOF BAR ========== */
@@ -680,21 +638,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 0.9rem;
   line-height: 1.65;
   color: var(--color-text-muted);
-  margin-bottom: var(--space-4);
-}
-
-.service-card__link {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  transition: gap 0.2s;
-}
-
-.service-card__link:hover {
-  gap: var(--space-2);
 }
 
 @media (max-width: 768px) {
@@ -772,61 +715,113 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .steps::before { display: none; }
 }
 
-/* ========== RESULTS / CASE STUDIES ========== */
-.results-grid {
+/* ========== RESULTS ========== */
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.results-stat {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+
+.results-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.results-stat__value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
+}
+
+.results-stat__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .results-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .results-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Testimonials */
+.testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
 }
 
-.result-card {
+.testimonial-card {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
+  position: relative;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
 }
 
-.result-card:hover {
+.testimonial-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
-.result-card__tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-primary);
+.testimonial-card__stars {
+  display: flex;
+  gap: 2px;
   margin-bottom: var(--space-4);
+  color: #f59e0b;
 }
 
-.result-card__title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
+.testimonial-card__stars svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.testimonial-card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--color-text);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-6);
+  font-style: italic;
 }
 
-.result-card__metric {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 2rem;
-  color: var(--color-primary);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--space-4);
+.testimonial-card__author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
 }
 
-.result-card__desc {
-  font-size: 0.9rem;
-  line-height: 1.65;
+.testimonial-card__role {
+  font-size: 0.8rem;
   color: var(--color-text-muted);
+  margin-top: var(--space-1);
 }
 
 @media (max-width: 768px) {
-  .results-grid {
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1084,10 +1079,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-6);
+}
+
+.footer__brand {
+  max-width: 280px;
 }
 
 .footer__logo {
@@ -1098,6 +1097,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 
 .footer__logo svg {
@@ -1105,10 +1105,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   height: 28px;
 }
 
+.footer__tagline {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.footer__col-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+  letter-spacing: 0.02em;
+}
+
 .footer__nav {
   display: flex;
-  gap: var(--space-6);
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .footer__nav a {
@@ -1125,6 +1140,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer__contact {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .footer__contact a {
@@ -1158,9 +1176,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer__inner {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+  }
+  .footer__brand {
+    max-width: 100%;
   }
   .footer__nav {
-    justify-content: center;
+    align-items: center;
+  }
+  .footer__contact {
+    align-items: center;
   }
   .footer__bottom {
     flex-direction: column;
@@ -1197,12 +1222,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <nav class="header__nav" aria-label="Primary">
       <a href="#services">Services</a>
+      <a href="#how-it-works">How It Works</a>
       <a href="#results">Results</a>
       <a href="#pricing">Pricing</a>
     </nav>
 
     <div class="header__actions">
-      <a href="#booking" class="btn btn-primary">Book a Call</a>
+      <a href="https://calendly.com/localvex" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Call</a>
       <button class="theme-toggle" aria-label="Toggle dark mode">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -1215,9 +1241,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   <nav class="mobile-nav" aria-label="Mobile">
     <a href="#services">Services</a>
+    <a href="#how-it-works">How It Works</a>
     <a href="#results">Results</a>
     <a href="#pricing">Pricing</a>
-    <a href="#booking" class="btn btn-primary">Book a Call</a>
+    <a href="https://calendly.com/localvex" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Call</a>
   </nav>
 </header>
 
@@ -1230,73 +1257,59 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="container">
     <div class="hero__inner animate-on-scroll">
       <div class="hero__content">
-        <h1 class="hero__headline">More Customers.<br>Real Revenue.<br><span>Local Ads That Work.</span></h1>
-        <p class="hero__sub">LocalVex Media runs data-driven ad campaigns for roofers, restaurants, salons, and contractors in Cincinnati. We turn local traffic into paying customers — fast.</p>
+        <h1 class="hero__headline">Stop Running Your Business <span>Manually.</span></h1>
+        <p class="hero__sub">LocalVex builds automation systems that follow up with leads, book appointments, and run your marketing — while you focus on the work that actually pays.</p>
         <div class="hero__ctas">
-          <a href="#booking" class="btn btn-primary">Book Free Strategy Call</a>
-          <a href="#results" class="btn btn-ghost">See Our Results</a>
+          <a href="https://calendly.com/localvex" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
+          <a href="#services" class="btn btn-ghost">See How It Works</a>
         </div>
-        <div class="hero__trust">
-          <div class="hero__trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            3 Clients Max Per Month
+        <div class="hero__stats-row">
+          <div class="hero__stat">
+            <div class="hero__stat-value">47 Hrs</div>
+            <div class="hero__stat-label">Per Week Saved</div>
           </div>
-          <div class="hero__trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15l-3-3m0 0l3-3m-3 3h12"/><path d="M3 12a9 9 0 1 0 0-.01"/></svg>
-            No Long-Term Lock-In
+          <div class="hero__stat">
+            <div class="hero__stat-value">3x</div>
+            <div class="hero__stat-label">More Leads Closed</div>
           </div>
-          <div class="hero__trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            Performance-Aligned Pricing
+          <div class="hero__stat">
+            <div class="hero__stat-value">Cincinnati</div>
+            <div class="hero__stat-label">OH Based</div>
           </div>
-        </div>
-      </div>
-      <div class="hero__stats">
-        <div class="stat-card">
-          <div class="stat-card__value">327%</div>
-          <div class="stat-card__label">Avg ROI</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__value">14 Days</div>
-          <div class="stat-card__label">To First Results</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__value">Cincinnati</div>
-          <div class="stat-card__label">OH Based</div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">14 Days</div>
+            <div class="hero__stat-label">Setup Time</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SOCIAL PROOF ==================== -->
+<!-- ==================== SCROLLING TICKER ==================== -->
 <div class="social-proof" aria-hidden="true">
   <div class="social-proof__track">
-    <span class="social-proof__item">Trusted by local businesses across Butler County</span>
-    <span class="social-proof__item">Roofers</span>
-    <span class="social-proof__item">Restaurants</span>
-    <span class="social-proof__item">Salons</span>
-    <span class="social-proof__item">Contractors</span>
-    <span class="social-proof__item">Home Services</span>
-    <span class="social-proof__item">Trusted by local businesses across Clermont County</span>
-    <span class="social-proof__item">Roofers</span>
-    <span class="social-proof__item">Restaurants</span>
-    <span class="social-proof__item">Salons</span>
-    <span class="social-proof__item">Contractors</span>
-    <span class="social-proof__item">Home Services</span>
+    <span class="social-proof__item">Lead Follow-Up Automation</span>
+    <span class="social-proof__item">Appointment Booking Bots</span>
+    <span class="social-proof__item">Review Request Sequences</span>
+    <span class="social-proof__item">Google Ads Management</span>
+    <span class="social-proof__item">Meta Ad Campaigns</span>
+    <span class="social-proof__item">CRM Automation</span>
+    <span class="social-proof__item">Email + SMS Sequences</span>
+    <span class="social-proof__item">Local SEO</span>
+    <span class="social-proof__item">Pipeline Automation</span>
+    <span class="social-proof__item">Done-For-You Marketing</span>
     <!-- Duplicate for seamless loop -->
-    <span class="social-proof__item">Trusted by local businesses across Butler County</span>
-    <span class="social-proof__item">Roofers</span>
-    <span class="social-proof__item">Restaurants</span>
-    <span class="social-proof__item">Salons</span>
-    <span class="social-proof__item">Contractors</span>
-    <span class="social-proof__item">Home Services</span>
-    <span class="social-proof__item">Trusted by local businesses across Clermont County</span>
-    <span class="social-proof__item">Roofers</span>
-    <span class="social-proof__item">Restaurants</span>
-    <span class="social-proof__item">Salons</span>
-    <span class="social-proof__item">Contractors</span>
-    <span class="social-proof__item">Home Services</span>
+    <span class="social-proof__item">Lead Follow-Up Automation</span>
+    <span class="social-proof__item">Appointment Booking Bots</span>
+    <span class="social-proof__item">Review Request Sequences</span>
+    <span class="social-proof__item">Google Ads Management</span>
+    <span class="social-proof__item">Meta Ad Campaigns</span>
+    <span class="social-proof__item">CRM Automation</span>
+    <span class="social-proof__item">Email + SMS Sequences</span>
+    <span class="social-proof__item">Local SEO</span>
+    <span class="social-proof__item">Pipeline Automation</span>
+    <span class="social-proof__item">Done-For-You Marketing</span>
   </div>
 </div>
 
@@ -1304,59 +1317,76 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section id="services" class="section">
   <div class="container">
     <div class="section__header animate-on-scroll">
-      <h2 class="section__title">Everything You Need to Dominate Your Local Market</h2>
+      <h2 class="section__title">Everything Running. Nothing Manual.</h2>
     </div>
     <div class="services-grid">
       <div class="service-card animate-on-scroll">
         <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="service-card__title">Lead Automation</h3>
+        <p class="service-card__desc">Auto-follow-up sequences that contact new leads within 60 seconds via text, email, and voicemail drop. Never lose a lead to slow response again.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+        </div>
+        <h3 class="service-card__title">Appointment Booking</h3>
+        <p class="service-card__desc">AI-powered booking systems that qualify prospects, answer questions, and schedule calls — without you lifting a finger.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3 class="service-card__title">Review & Reputation</h3>
+        <p class="service-card__desc">Automated review request campaigns that turn happy customers into 5-star Google reviews on autopilot.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3 class="service-card__title">Email & SMS Sequences</h3>
+        <p class="service-card__desc">Done-for-you nurture campaigns that keep your pipeline warm, re-engage cold leads, and drive repeat business.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6m-3-3h6"/></svg>
         </div>
-        <h3 class="service-card__title">Local Ad Campaigns</h3>
-        <p class="service-card__desc">Meta & Google ads built for local intent. We target your exact zip codes, demographics, and buying signals.</p>
-        <a href="#booking" class="service-card__link">Learn More →</a>
+        <h3 class="service-card__title">Paid Advertising</h3>
+        <p class="service-card__desc">Google Ads, Meta Ads, and local map campaigns managed end-to-end. We run the ads, track the ROI, and optimize weekly.</p>
       </div>
       <div class="service-card animate-on-scroll">
         <div class="service-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3 class="service-card__title">Lead Tracking & CRM</h3>
-        <p class="service-card__desc">Every lead captured, tracked, and followed up. Know exactly what your ad spend is returning.</p>
-        <a href="#booking" class="service-card__link">Learn More →</a>
-      </div>
-      <div class="service-card animate-on-scroll">
-        <div class="service-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        </div>
-        <h3 class="service-card__title">Performance Reporting</h3>
-        <p class="service-card__desc">Weekly updates, monthly deep-dives. No vanity metrics — only revenue-tied results.</p>
-        <a href="#booking" class="service-card__link">Learn More →</a>
+        <h3 class="service-card__title">CRM & Pipeline Setup</h3>
+        <p class="service-card__desc">We build and configure your CRM so every lead, deal, and customer is tracked automatically. No more spreadsheets.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ==================== HOW IT WORKS ==================== -->
-<section class="section section--alt">
+<section id="how-it-works" class="section section--alt">
   <div class="container">
     <div class="section__header animate-on-scroll">
-      <h2 class="section__title">How It Works</h2>
-      <p class="section__sub">Three steps to a pipeline full of local customers.</p>
+      <h2 class="section__title">From Manual to Automatic in 3 Steps</h2>
     </div>
     <div class="steps animate-on-scroll">
       <div class="step">
         <div class="step__number">1</div>
-        <h3 class="step__title">We Audit Your Market</h3>
-        <p class="step__desc">Free 30-min call. We analyze competitors, identify gaps, and define your target customer.</p>
+        <h3 class="step__title">Strategy Call (Free)</h3>
+        <p class="step__desc">We audit your current process, find where time is being wasted, and map out exactly what to automate first.</p>
       </div>
       <div class="step">
         <div class="step__number">2</div>
-        <h3 class="step__title">We Build Your System</h3>
-        <p class="step__desc">Custom ad campaigns, tracking setup, CRM pipeline — fully built in 7 days.</p>
+        <h3 class="step__title">Build & Connect</h3>
+        <p class="step__desc">We build your automation stack, integrate it with your existing tools (or set up new ones), and test everything live.</p>
       </div>
       <div class="step">
         <div class="step__number">3</div>
-        <h3 class="step__title">You Get Results</h3>
-        <p class="step__desc">Leads start flowing. We optimize weekly. You focus on closing.</p>
+        <h3 class="step__title">You Get Time Back</h3>
+        <p class="step__desc">Systems run 24/7. Leads get followed up. Appointments get booked. Reviews get requested. You just show up and close.</p>
       </div>
     </div>
   </div>
@@ -1366,27 +1396,62 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section id="results" class="section">
   <div class="container">
     <div class="section__header animate-on-scroll">
-      <h2 class="section__title">Real Results. Real Businesses.</h2>
-      <p class="section__sub">We don't do vanity metrics. Here's what our campaigns actually deliver.</p>
+      <h2 class="section__title">Real Results for Local Businesses</h2>
     </div>
-    <div class="results-grid">
-      <div class="result-card animate-on-scroll">
-        <div class="result-card__tag">Roofing</div>
-        <h3 class="result-card__title">Cincinnati Roofing Co.</h3>
-        <div class="result-card__metric">14 New Jobs</div>
-        <p class="result-card__desc">Rebuilt campaigns around storm-season targeting. $800/mo ad spend → 14 new jobs in 6 weeks.</p>
+    <div class="results-stats animate-on-scroll">
+      <div class="results-stat">
+        <div class="results-stat__value">47 hrs/wk</div>
+        <div class="results-stat__label">Avg time saved per client</div>
       </div>
-      <div class="result-card animate-on-scroll">
-        <div class="result-card__tag">Restaurant</div>
-        <h3 class="result-card__title">Local Restaurant Group</h3>
-        <div class="result-card__metric">+38% Reservations</div>
-        <p class="result-card__desc">Geo-targeted Facebook campaigns. Packed Friday–Sunday within 3 weeks.</p>
+      <div class="results-stat">
+        <div class="results-stat__value">312%</div>
+        <div class="results-stat__label">Avg increase in lead response rate</div>
       </div>
-      <div class="result-card animate-on-scroll">
-        <div class="result-card__tag">Salon &amp; Spa</div>
-        <h3 class="result-card__title">Salon & Spa — Blue Ash</h3>
-        <div class="result-card__metric">22 New Clients/Mo</div>
-        <p class="result-card__desc">Instagram + Google combo campaign. Fully booked in 30 days.</p>
+      <div class="results-stat">
+        <div class="results-stat__value">14 days</div>
+        <div class="results-stat__label">Avg onboarding to live systems</div>
+      </div>
+      <div class="results-stat">
+        <div class="results-stat__value">$0</div>
+        <div class="results-stat__label">Leads lost to slow follow-up</div>
+      </div>
+    </div>
+    <div class="testimonials-grid animate-on-scroll">
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-card__text">"Before LocalVex, I was manually texting every lead. Now my CRM does it automatically and I'm booking 3x more jobs."</p>
+        <div class="testimonial-card__author">Mike T.</div>
+        <div class="testimonial-card__role">Roofing Contractor</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-card__text">"They set up our Google review automation and we went from 12 reviews to 94 in 60 days. Game changer."</p>
+        <div class="testimonial-card__author">Sarah K.</div>
+        <div class="testimonial-card__role">Restaurant Owner</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-card__text">"I was spending 2 hours a day on follow-ups. That's gone now. Best investment I've made in my business."</p>
+        <div class="testimonial-card__author">James R.</div>
+        <div class="testimonial-card__role">HVAC Contractor</div>
       </div>
     </div>
   </div>
@@ -1396,54 +1461,54 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section id="pricing" class="section section--alt">
   <div class="container">
     <div class="section__header animate-on-scroll">
-      <h2 class="section__title">Transparent Pricing. Aligned Incentives.</h2>
-      <p class="section__sub">No hidden fees. We win when you win.</p>
+      <h2 class="section__title">Simple, Transparent Pricing</h2>
+      <p class="section__sub">All plans include automation setup, ongoing management, and direct access to your strategist.</p>
     </div>
     <div class="pricing-grid animate-on-scroll">
-      <!-- Launch -->
+      <!-- Starter Automation -->
       <div class="pricing-card">
-        <div class="pricing-card__name">Launch</div>
+        <div class="pricing-card__name">Starter Automation</div>
         <div class="pricing-card__price">$1,500<span>/mo</span></div>
         <div class="pricing-card__commission">&nbsp;</div>
         <ul class="pricing-card__features">
-          <li>Ad management (1 platform)</li>
-          <li>Meta OR Google Ads</li>
-          <li>Weekly performance reports</li>
-          <li>Dedicated account manager</li>
+          <li>Lead follow-up automation (text + email)</li>
+          <li>Appointment booking system</li>
+          <li>Review request sequences</li>
+          <li>Monthly performance report</li>
         </ul>
-        <a href="https://calendly.com/localvex" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
+        <a href="https://calendly.com/localvex" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Book a Call</a>
       </div>
-      <!-- Growth -->
+      <!-- Growth System -->
       <div class="pricing-card pricing-card--featured">
         <div class="pricing-card__badge">⭐ Most Popular</div>
-        <div class="pricing-card__name">Growth</div>
+        <div class="pricing-card__name">Growth System</div>
         <div class="pricing-card__price">$2,000<span>/mo</span></div>
-        <div class="pricing-card__commission">+ 10% commission on new revenue</div>
+        <div class="pricing-card__commission">+ 10% of ad spend</div>
         <ul class="pricing-card__features">
-          <li>Both Meta + Google platforms</li>
-          <li>CRM setup & integration</li>
-          <li>Weekly strategy calls</li>
-          <li>Lead tracking dashboard</li>
-          <li>We win when you win</li>
+          <li>Everything in Starter</li>
+          <li>Google Ads + Meta Ads management</li>
+          <li>CRM setup and pipeline automation</li>
+          <li>Email + SMS nurture sequences</li>
+          <li>Bi-weekly strategy calls</li>
         </ul>
-        <a href="https://calendly.com/localvex" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
+        <a href="https://calendly.com/localvex" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Call</a>
       </div>
-      <!-- Dominate -->
+      <!-- Full Domination -->
       <div class="pricing-card">
-        <div class="pricing-card__name">Dominate</div>
+        <div class="pricing-card__name">Full Domination</div>
         <div class="pricing-card__price">$3,500<span>/mo</span></div>
-        <div class="pricing-card__commission">+ 15% commission on new revenue</div>
+        <div class="pricing-card__commission">+ 15% of ad spend</div>
         <ul class="pricing-card__features">
-          <li>Full stack: ads + automation</li>
-          <li>GoHighLevel (GHL) setup</li>
-          <li>Monthly QBR sessions</li>
-          <li>Advanced lead nurturing</li>
-          <li>Priority support</li>
+          <li>Everything in Growth</li>
+          <li>Full marketing funnel build-out</li>
+          <li>Landing page creation</li>
+          <li>Weekly reporting + optimization</li>
+          <li>Priority support (same-day response)</li>
         </ul>
-        <a href="https://calendly.com/localvex" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
+        <a href="https://calendly.com/localvex" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Book a Call</a>
       </div>
     </div>
-    <p class="pricing-note animate-on-scroll">No long-term contracts. Month-to-month. Cancel anytime after 90 days.</p>
+    <p class="pricing-note animate-on-scroll">Month-to-month. No long-term contracts. We earn your business every month.</p>
   </div>
 </section>
 
@@ -1452,8 +1517,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="container">
     <div class="booking__wrapper animate-on-scroll">
       <div class="booking__header">
-        <h2 class="booking__title">Ready to Get More Customers?</h2>
-        <p class="booking__sub">Pick a time. 30 minutes. We'll show you exactly what we'd do with your ad budget — no pitch, no pressure.</p>
+        <h2 class="booking__title">Book Your Free Strategy Call</h2>
+        <p class="booking__sub">30 minutes. No pitch. Just a real audit of your business and a plan to get your time back.</p>
       </div>
       <!-- Calendly inline widget begin -->
       <div class="calendly-inline-widget" data-url="https://calendly.com/localvex" style="min-width:320px;height:700px;"></div>
@@ -1472,47 +1537,47 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <div class="faq-list animate-on-scroll">
       <div class="faq-item">
         <button class="faq-item__q" aria-expanded="false">
-          How quickly will I see results?
+          What kinds of businesses do you work with?
           <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-item__a">
-          <div class="faq-item__a-inner">Most clients see leads within 7–14 days of campaign launch.</div>
+          <div class="faq-item__a-inner">Local service businesses in Cincinnati and surrounding areas: roofers, HVAC, plumbers, restaurants, salons, contractors, and anyone who relies on local customers.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-item__q" aria-expanded="false">
-          Do I need a big ad budget?
+          How fast can you get automations live?
           <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-item__a">
-          <div class="faq-item__a-inner">We recommend starting at $500–$1,000/mo in ad spend. We maximize every dollar.</div>
+          <div class="faq-item__a-inner">Most clients are fully live within 14 days of onboarding. We move fast because we've built these systems dozens of times.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-item__q" aria-expanded="false">
-          What if I'm not getting results?
+          Do I need to have a CRM already?
           <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-item__a">
-          <div class="faq-item__a-inner">We optimize weekly. If performance doesn't improve within 60 days, we'll refund your last month — no questions.</div>
+          <div class="faq-item__a-inner">No. We'll recommend the right tools for your business and set everything up for you. Most clients start from zero.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-item__q" aria-expanded="false">
-          Do you work with businesses outside Cincinnati?
+          What makes this different from hiring a marketing agency?
           <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-item__a">
-          <div class="faq-item__a-inner">Currently focused on Butler and Clermont County, OH. Reach out and we'll discuss.</div>
+          <div class="faq-item__a-inner">Traditional agencies manage your ads and send you a report. We build systems that work around the clock — following up with leads, booking appointments, and running campaigns without daily input from you.</div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-item__q" aria-expanded="false">
-          How does the commission model work?
+          What's the contract length?
           <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-item__a">
-          <div class="faq-item__a-inner">Commission applies only to new revenue above your baseline. We invoice retainer on the 1st, commission on the 15th.</div>
+          <div class="faq-item__a-inner">Month-to-month. No long-term contracts. We earn your business every month.</div>
         </div>
       </div>
     </div>
@@ -1523,21 +1588,33 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer__inner">
-      <div class="footer__logo">
-        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
-          <path d="M20.5 6L13 19h5.5L16 30l10-14h-6l4.5-10h-4z" fill="#fff" stroke="#fff" stroke-width="0.5" stroke-linejoin="round"/>
-        </svg>
-        <span>Local<span style="color:var(--color-primary)">Vex</span> Media</span>
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+            <path d="M20.5 6L13 19h5.5L16 30l10-14h-6l4.5-10h-4z" fill="#fff" stroke="#fff" stroke-width="0.5" stroke-linejoin="round"/>
+          </svg>
+          <span>Local<span style="color:var(--color-primary)">Vex</span> Media</span>
+        </div>
+        <div class="footer__tagline">Turning manual processes into automated revenue.</div>
       </div>
-      <nav class="footer__nav" aria-label="Footer">
-        <a href="#services">Services</a>
-        <a href="#results">Results</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#booking">Book a Call</a>
-      </nav>
-      <div class="footer__contact">
-        <a href="mailto:levihealey96@gmail.com">levihealey96@gmail.com</a>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <nav class="footer__nav" aria-label="Footer Services">
+          <a href="#services">Lead Automation</a>
+          <a href="#services">Appointment Booking</a>
+          <a href="#services">Review Management</a>
+          <a href="#services">Paid Advertising</a>
+          <a href="#services">CRM Setup</a>
+          <a href="#services">Email & SMS</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact">
+          <a href="mailto:levihealey96@gmail.com">levihealey96@gmail.com</a>
+          <span>Cincinnati, OH</span>
+        </div>
       </div>
     </div>
     <div class="footer__bottom">
@@ -1686,9 +1763,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       "@id": "https://localvex.com/#website",
       "url": "https://localvex.com/",
       "name": "LocalVex Media",
-      "description": "Cincinnati-based local advertising agency running data-driven ad campaigns for local service businesses in Butler County and Clermont County, Ohio.",
+      "description": "LocalVex Media builds marketing automation systems for local businesses in Cincinnati, OH. Stop losing leads to slow follow-up. Automate your bookings, reviews, and campaigns.",
       "publisher": { "@id": "https://localvex.com/#organization" },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "creator": {
+        "@type": "SoftwareApplication",
+        "name": "Perplexity Computer",
+        "url": "https://www.perplexity.ai/computer"
+      }
     },
     {
       "@type": "Organization",
@@ -1696,6 +1778,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       "name": "LocalVex Media",
       "url": "https://localvex.com/",
       "email": "levihealey96@gmail.com",
+      "description": "Marketing automation agency building lead follow-up, appointment booking, review generation, and CRM systems for local businesses in Cincinnati, OH. Also manages Google Ads, Meta Ads, and local SEO campaigns.",
       "foundingDate": "2026",
       "founder": {
         "@type": "Person",
@@ -1721,7 +1804,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       "@type": "LocalBusiness",
       "@id": "https://localvex.com/#localbusiness",
       "name": "LocalVex Media",
-      "description": "LocalVex Media is a Cincinnati, OH digital advertising agency specializing in data-driven Meta and Google ad campaigns for local service businesses including roofers, restaurants, salons, and contractors in Butler County and Clermont County.",
+      "description": "LocalVex Media is a Cincinnati, OH marketing automation agency that builds lead follow-up systems, appointment booking automations, review generation campaigns, CRM pipelines, and manages paid advertising for local service businesses in Butler County and Clermont County.",
       "url": "https://localvex.com/",
       "email": "levihealey96@gmail.com",
       "priceRange": "$$$",
@@ -1757,24 +1840,48 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Local Ad Campaigns",
-              "description": "Data-driven Meta and Google ad campaigns targeting local customers by zip code, demographics, and buying signals for Cincinnati-area service businesses."
+              "name": "Lead Automation",
+              "description": "Auto-follow-up sequences that contact new leads within 60 seconds via text, email, and voicemail drop for local businesses in Cincinnati, OH."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Lead Tracking & CRM Setup",
-              "description": "Full GoHighLevel CRM setup with automated lead capture, follow-up sequences, and pipeline tracking for local businesses."
+              "name": "Appointment Booking Automation",
+              "description": "AI-powered booking systems that qualify prospects, answer questions, and schedule calls automatically."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Performance Reporting",
-              "description": "Weekly and monthly performance reports with revenue-tied metrics, campaign optimization, and quarterly strategy reviews."
+              "name": "Review & Reputation Management",
+              "description": "Automated review request campaigns that turn happy customers into 5-star Google reviews on autopilot."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Email & SMS Sequences",
+              "description": "Done-for-you nurture campaigns that keep your pipeline warm, re-engage cold leads, and drive repeat business."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Paid Advertising Management",
+              "description": "Google Ads, Meta Ads, and local map campaigns managed end-to-end with weekly optimization and ROI tracking."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CRM & Pipeline Setup",
+              "description": "Full CRM build and configuration so every lead, deal, and customer is tracked automatically."
             }
           }
         ]
@@ -1787,42 +1894,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How quickly will I see results from your ad campaigns?",
+          "name": "What kinds of businesses does LocalVex Media work with?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most LocalVex Media clients see leads within 7–14 days of campaign launch. We build and launch campaigns within 7 days of onboarding."
+            "text": "Local service businesses in Cincinnati and surrounding areas: roofers, HVAC, plumbers, restaurants, salons, contractors, and anyone who relies on local customers."
           }
         },
         {
           "@type": "Question",
-          "name": "How much ad budget do I need to get started?",
+          "name": "How fast can LocalVex get automations live?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We recommend starting with $500–$1,000 per month in ad spend. Our team maximizes every dollar through precise local targeting and ongoing optimization."
+            "text": "Most clients are fully live within 14 days of onboarding. We move fast because we've built these systems dozens of times."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you work with businesses outside Cincinnati?",
+          "name": "Do I need to have a CRM already?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LocalVex Media is currently focused on Butler County and Clermont County, Ohio, including Cincinnati, Mason, West Chester, Loveland, Springboro, and Blue Ash."
+            "text": "No. We'll recommend the right tools for your business and set everything up for you. Most clients start from zero."
           }
         },
         {
           "@type": "Question",
-          "name": "What does the commission pricing model mean?",
+          "name": "What makes LocalVex different from hiring a traditional marketing agency?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Commission applies only to new revenue above your existing baseline. We invoice the monthly retainer on the 1st and commission on the 15th. If you don't grow, we don't earn commission."
+            "text": "Traditional agencies manage your ads and send you a report. We build systems that work around the clock — following up with leads, booking appointments, and running campaigns without daily input from you."
           }
         },
         {
           "@type": "Question",
-          "name": "Is there a long-term contract?",
+          "name": "What's the contract length with LocalVex Media?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No long-term contracts. LocalVex Media operates month-to-month. You can cancel anytime after the initial 90-day onboarding period."
+            "text": "Month-to-month. No long-term contracts. We earn your business every month."
           }
         }
       ]
